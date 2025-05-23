@@ -1,0 +1,180 @@
+/* Fondo negro para toda la página y texto blanco */
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sticky navbar */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  animation: slideDown 0.4s ease-in-out;
+  background-color: #121212 !important; /* Navbar oscuro para contraste */
+  border-bottom: 1px solid purple;
+}
+
+@keyframes slideDown {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* Tamaño del mapa */
+#mapa {
+  width: 100%;
+  height: 400px;
+  border: purple;
+  filter: contrast(1.1) brightness(0.9); /* opcional para que el mapa luzca bien */
+}
+
+/* Vibración solo para imágenes con clase vibrar */
+@keyframes vibrar {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.vibrar:hover {
+  animation: vibrar 0.3s infinite;
+  cursor: pointer;
+}
+
+/* Exclusión: imágenes dentro del carrusel NO vibran aunque tengan clase vibrar */
+.carousel-inner img {
+  animation: none !important;
+  cursor: default !important;
+}
+
+/* Botones navbar más grandes y morados al hover */
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+  transition: color 0.3s ease;
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: purple !important;
+}
+
+/* Contenedor para imágenes con borde y fondo negro */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  border: 3px solid purple;
+  background-color: black;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+
+/* Zoom suave al pasar mouse sobre cualquier imagen */
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Ajustes para títulos y párrafos para que se vean bien */
+h1, h2, h3, h4, h5, h6, p, a, label {
+  color: #ffffff;
+}
+
+/* Botones estilo oscuro */
+.btn-primary {
+  background-color: purple;
+  border-color: purple;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #800080cc;
+  border-color: #800080cc;
+  color: #fff;
+}
+
+/* Footer fondo negro y texto blanco */
+footer {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: purple;
+}
+
+
+.fantasma-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+#fantasma {
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+#fantasma:hover {
+  transform: scale(1.1);
+}
+
+/* Velocímetro */
+#velocimetro {
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(purple 0% 35%, #111 35% 100%);
+  border-radius: 50%;
+  border: 4px solid #a64ca6;
+  box-shadow: 0 0 15px #a64ca6;
+  animation: girar 2s linear infinite;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.formulario-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.formulario-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+#imagen-izquierda {
+  width: 500px;
+  height: auto;
+  filter: drop-shadow(0 0 10px #8e44ad);
+  transition: transform 0.3s ease;
+  
+}
